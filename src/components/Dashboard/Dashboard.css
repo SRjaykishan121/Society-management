@@ -10,31 +10,79 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    
     position: relative;
     height: 75px;
-  }
-  
-  .balance-card::before {
+    overflow: hidden;
+}
+
+.balance-card-orange::after {
     content: '';
     position: absolute;
-    top: 16px;
-    left: 0;
-    bottom: 0;
-    width: 8px;
-    height: 40px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
+    top: 0;
+    right: 0;
+    height: 60%;
+    width: 30%;
+    background: linear-gradient(to bottom, #FFA64D 1px, transparent 5px) no-repeat,
+        linear-gradient(to left, #FFA64D 1px, transparent 5px) no-repeat;
+    background-position: top right, right top;
+    border-top-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;  /* Ensures no conflict */
+    clip-path: polygon(
+        17% border
+    ),
+}
+.balance-card-green::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60%;
+  width: 30%;
+  background: linear-gradient(to bottom, #4CAF50 1px, transparent 5px) no-repeat,
+      linear-gradient(to left, #4CAF50 1px, transparent 5px) no-repeat;
+  background-position: top right, right top;
+  border-top-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;  /* Ensures no conflict */
+  clip-path: polygon(
+      17% border
+  ),
+}
+.balance-card-blue::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60%;
+  width: 30%;
+  background: linear-gradient(to bottom, #42A5F5 1px, transparent 5px) no-repeat,
+      linear-gradient(to left, #42A5F5 1px, transparent 5px) no-repeat;
+  background-position: top right, right top;
+  border-top-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;  /* Ensures no conflict */
+  clip-path: polygon(
+      17% border
+  ),
+}
+.balance-card-pink::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60%;
+  width: 30%;
+  background: linear-gradient(to bottom, #EC407A 1px, transparent 5px) no-repeat,
+      linear-gradient(to left, #EC407A 1px, transparent 5px) no-repeat;
+  background-position: top right, right top;
+  border-top-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;  /* Ensures no conflict */
+  clip-path: polygon(
+      17% border
+  ),
+}
+.balance-card::before { 
+  background-color: #FFA64D; /* Orange for left border */
+}
 
-  
-
-  
-  /* Distinct colors for each card type */
-  .balance-card-orange::before {
-    background-color: #FFA64D; /* Orange for Total Balance */
-  }
-  
   .balance-card-green::before {
     background-color: #4CAF50; /* Green for Total Income */
   }

@@ -360,7 +360,7 @@ const Dashboard = () => {
           <div className="row">
             {/* Important Numbers */}
             <div className="col-lg-6">
-              <div className="card border rounded" style={{ maxHeight: "430px" }}>
+              <div className="card border rounded" style={{ maxHeight: "430px", minHeight:"430px", }}>
                 <div className="card-header d-flex justify-content-between align-items-center p-2">
                   <h5 style={{ fontSize: "20px" , fontWeight: "bold" }}>Important Numbers</h5>
                   <button
